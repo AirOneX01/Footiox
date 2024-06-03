@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Wy-kf-Pda" userLabel="PurpleView">
+                                <rect key="frame" x="203" y="0.0" width="190" height="190"/>
+                                <color key="backgroundColor" red="0.84313725490000002" green="0.84705882349999995" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="BkC-du-tzb"/>
+                                    <constraint firstAttribute="width" constant="190" id="ufh-IE-8de"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8M-Og-FFR">
+                                <rect key="frame" x="0.0" y="164" width="298" height="298"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHI-Hq-nWm">
+                                        <rect key="frame" x="19.999999999999986" y="191.66666666666669" width="226.66666666666663" height="76.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="64"/>
+                                        <color key="textColor" name="Background"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="my" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSV-AO-HoM">
+                                        <rect key="frame" x="20" y="116.66666666666669" width="87" height="75"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="64"/>
+                                        <color key="textColor" name="Background"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.99215686270000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ZHI-Hq-nWm" firstAttribute="top" secondItem="bSV-AO-HoM" secondAttribute="bottom" id="Lb2-lt-NmS"/>
+                                    <constraint firstItem="bSV-AO-HoM" firstAttribute="leading" secondItem="V8M-Og-FFR" secondAttribute="leading" constant="20" id="MP1-Pw-o5Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZHI-Hq-nWm" secondAttribute="bottom" constant="30" id="fhn-ci-DSf"/>
+                                    <constraint firstItem="ZHI-Hq-nWm" firstAttribute="leading" secondItem="V8M-Og-FFR" secondAttribute="leading" constant="20" id="suL-qW-3dU"/>
+                                    <constraint firstAttribute="width" secondItem="V8M-Og-FFR" secondAttribute="height" multiplier="1:1" id="vJv-8u-K7r"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OnbordingLogo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aAc-Fv-9S6">
+                                <rect key="frame" x="68" y="0.0" width="325" height="381"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="LsJ-bl-Jty"/>
+                                    <constraint firstAttribute="height" constant="381" id="iFq-Fo-Emv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V8M-Og-FFR" secondAttribute="trailing" constant="95" id="2rY-tY-NR0"/>
+                            <constraint firstItem="2Wy-kf-Pda" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="9si-hP-Ts2"/>
+                            <constraint firstItem="V8M-Og-FFR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q0p-XK-hIW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aAc-Fv-9S6" secondAttribute="trailing" id="T2J-Qc-PFB"/>
+                            <constraint firstItem="2Wy-kf-Pda" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="egC-s9-YMA"/>
+                            <constraint firstItem="aAc-Fv-9S6" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="nOK-Mr-Bbe"/>
+                            <constraint firstItem="V8M-Og-FFR" firstAttribute="width" secondItem="V8M-Og-FFR" secondAttribute="height" multiplier="1:1" id="vh7-8f-jpB"/>
+                            <constraint firstItem="V8M-Og-FFR" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="105" id="ydn-nr-tNY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="OnbordingLogo" width="947" height="1096"/>
+        <namedColor name="Background">
+            <color red="0.019607843137254902" green="0.17647058823529413" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
