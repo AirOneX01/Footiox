@@ -44,4 +44,14 @@ class PListManager {
         }
         return documentsURL.appendingPathComponent("leagues.plist")
     }
+    
+    // MARK: - Ob save
+    
+    static func isObShowed() -> Bool{
+        return UserDefaults.standard.bool(forKey: "OB_SHOW")
+    }
+    
+    static func setObShown(){
+        UserDefaults.standard.set(true, forKey: "OB_SHOW")
+    }
 }

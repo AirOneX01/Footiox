@@ -35,6 +35,7 @@
 		84EDCB6F2BCEA7B50019C39C /* FixtureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84EDCB6D2BCEA7B50019C39C /* FixtureCell.xib */; };
 		84EDCB722BCEA7D70019C39C /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDCB702BCEA7D70019C39C /* HeaderCell.swift */; };
 		84EDCB732BCEA7D70019C39C /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84EDCB712BCEA7D70019C39C /* HeaderCell.xib */; };
+		9A836E2E2C28151D0011E2A1 /* Onboarding2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A836E2D2C28151D0011E2A1 /* Onboarding2ViewController.swift */; };
 		BB6BF224569ED6AAA364F533 /* Pods_My_Score.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41E9BED981CDC633089A680C /* Pods_My_Score.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		84EDCB6D2BCEA7B50019C39C /* FixtureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FixtureCell.xib; sourceTree = "<group>"; };
 		84EDCB702BCEA7D70019C39C /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		84EDCB712BCEA7D70019C39C /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
+		9A836E2D2C28151D0011E2A1 /* Onboarding2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2ViewController.swift; sourceTree = "<group>"; };
 		9FD7EB6B4B1EB16EC56328F7 /* Pods-My Score.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Score.debug.xcconfig"; path = "Target Support Files/Pods-My Score/Pods-My Score.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +170,7 @@
 				840007902BCEAA4600DED8C6 /* LeagueDetailViewController.swift */,
 				840007922BCEAA5B00DED8C6 /* VotesDetailsViewController.swift */,
 				840007942BCEAA6E00DED8C6 /* ScoresDeatilViewController.swift */,
+				9A836E2D2C28151D0011E2A1 /* Onboarding2ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			files = (
 				840007892BCEA9FB00DED8C6 /* OnboardingViewController.swift in Sources */,
 				8400078D2BCEAA2200DED8C6 /* ScoresViewController.swift in Sources */,
+				9A836E2E2C28151D0011E2A1 /* Onboarding2ViewController.swift in Sources */,
 				84EDCB652BCEA74F0019C39C /* PlayerModel.swift in Sources */,
 				84EDCB612BCEA70E0019C39C /* LeagueModel.swift in Sources */,
 				840007952BCEAA6E00DED8C6 /* ScoresDeatilViewController.swift in Sources */,
@@ -467,9 +471,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
-				DEVELOPMENT_TEAM = Q3768T2773;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = Q3768T2773;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "My Score/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = FootioX;
@@ -485,10 +491,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.10;
+				MARKETING_VERSION = 1.0.12;
 				PRODUCT_BUNDLE_IDENTIFIER = football.stats.realtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = 1;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -506,9 +513,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
-				DEVELOPMENT_TEAM = Q3768T2773;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = Q3768T2773;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "My Score/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = FootioX;
@@ -524,10 +533,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.10;
+				MARKETING_VERSION = 1.0.12;
 				PRODUCT_BUNDLE_IDENTIFIER = football.stats.realtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = 1;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

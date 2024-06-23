@@ -15,7 +15,13 @@ class Onboarding2ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func goPressed(_ sender: Any) {
+        
+        PListManager.setObShown()
+        self.view.window!.rootViewController?.dismiss(animated: true)
+        
+    }
+    
     /*
     // MARK: - Navigation
 

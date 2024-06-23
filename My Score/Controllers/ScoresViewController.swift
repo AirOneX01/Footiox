@@ -60,7 +60,11 @@ class ScoresViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         if showLaunch {
             showLaunch = false
-            performSegue(withIdentifier: "MainToOnb", sender: self)
+            if !PListManager.isObShowed(){
+                performSegue(withIdentifier: "MainToOnb2", sender: self)
+            }else{
+                performSegue(withIdentifier: "MainToOnb", sender: self)
+            }
         }
         if ScoresViewController.shouldUpdate {
             ScoresViewController.shouldUpdate = false
