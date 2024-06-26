@@ -39,7 +39,7 @@
 		9A836E302C28439E0011E2A1 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A836E2F2C28439E0011E2A1 /* PayViewController.swift */; };
 		9A836E322C2AEE020011E2A1 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A836E312C2AEE020011E2A1 /* FirebaseManager.swift */; };
 		9AD48BC52C2B071F0026705D /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD48BC42C2B071F0026705D /* PurchaseManager.swift */; };
-		9AD48BC72C2B10F60026705D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AD48BC62C2B10F60026705D /* GoogleService-Info.plist */; };
+		9AD48BC92C2C0A4E0026705D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AD48BC82C2C0A4E0026705D /* GoogleService-Info.plist */; };
 		BB6BF224569ED6AAA364F533 /* Pods_My_Score.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41E9BED981CDC633089A680C /* Pods_My_Score.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,7 +81,7 @@
 		9A836E312C2AEE020011E2A1 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		9AB704492C2B06AF001E3394 /* FootioX.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = FootioX.storekit; sourceTree = "<group>"; };
 		9AD48BC42C2B071F0026705D /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
-		9AD48BC62C2B10F60026705D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9AD48BC82C2C0A4E0026705D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9FD7EB6B4B1EB16EC56328F7 /* Pods-My Score.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Score.debug.xcconfig"; path = "Target Support Files/Pods-My Score/Pods-My Score.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				9AB704492C2B06AF001E3394 /* FootioX.storekit */,
-				9AD48BC62C2B10F60026705D /* GoogleService-Info.plist */,
+				9AD48BC82C2C0A4E0026705D /* GoogleService-Info.plist */,
 				84EDCB5F2BCEA6EB0019C39C /* Controllers */,
 				84EDCB5E2BCEA6DA0019C39C /* Views */,
 				84EDCB5D2BCEA6D10019C39C /* Models */,
@@ -259,7 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84EDCB6F2BCEA7B50019C39C /* FixtureCell.xib in Resources */,
-				9AD48BC72C2B10F60026705D /* GoogleService-Info.plist in Resources */,
+				9AD48BC92C2C0A4E0026705D /* GoogleService-Info.plist in Resources */,
 				8445EC7A2BCE8ED500420E7E /* LaunchScreen.storyboard in Resources */,
 				8400079B2BDA886700DED8C6 /* TeamCell.xib in Resources */,
 				8445EC772BCE8ED500420E7E /* Assets.xcassets in Resources */,
