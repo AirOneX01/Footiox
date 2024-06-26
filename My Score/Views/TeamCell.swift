@@ -12,9 +12,7 @@ class TeamCell: UITableViewCell {
     static let reuseId = String(describing: TeamCell.self)
     static let nib = UINib(nibName: String(describing: TeamCell.self), bundle: nil)
 
-    @IBOutlet weak var teamImage: UIImageView!
     @IBOutlet weak var teamName: UILabel!
-    @IBOutlet weak var teamYear: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

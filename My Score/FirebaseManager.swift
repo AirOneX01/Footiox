@@ -6,4 +6,24 @@
 //
 
 import Foundation
-import FirebaseCore
+import FirebaseDatabase
+
+class FirebaseManager {
+    
+    static var news = [String]()
+    
+    static func loadNews(){
+        
+        var dbRef = Database.database().reference()
+        
+        dbRef.child("News").observeSingleEvent(of: .value) { ds in
+            if let strArray = ds.value as? [String]{
+                news.removeAll()
+                news.append(contentsOf: strArray)
+            }
+        }
+        
+    }
+    
+    
+}

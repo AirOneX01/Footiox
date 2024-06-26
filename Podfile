@@ -15,6 +15,8 @@ target 'My Score' do
   use_frameworks!
   pod 'Alamofire'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'FirebaseAnalytics'
+  pod 'FirebaseDatabase'
   # Pods for My Score
 
 end

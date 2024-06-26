@@ -16,7 +16,7 @@ class LeagueDetailViewController: UIViewController {
     @IBOutlet weak var leagueDates: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var teamList = [TeamModel]()
+    var newsList = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,27 +25,22 @@ class LeagueDetailViewController: UIViewController {
         tableView.dataSource = self
         
         tableView.register(TeamCell.nib, forCellReuseIdentifier: TeamCell.reuseId)
+        
+        if let league = selectedLeague {
+            leagueName.text = league.name
+            leagueDates.text = league.dates
+            
+            if let url = URL(string: league.image){
+                leagueImage.loadImageFromURL(url)
+            }
+        }
 
-        setData()
+        newsList.removeAll()
+        newsList.append(contentsOf: FirebaseManager.news)
         // Do any additional setup after loading the view.
     }
     
-    private func setData(){
-        if let league = selectedLeague{
-            leagueName.text = league.name
-            if let imageURL = URL(string: league.image){
-                leagueImage.loadImageFromURL(imageURL)
-            }
-            leagueDates.text = league.dates
-            ApiManager.loadParticipants(league: league) { teams in
-                DispatchQueue.main.async {
-                    self.teamList.removeAll()
-                    self.teamList.append(contentsOf: teams)
-                    self.tableView.reloadData()
-                }
-            }
-        }
-    }
+    
     
     @IBAction func backPressed(_ sender: UIButton) {
             dismiss(animated: true)
@@ -66,22 +61,14 @@ class LeagueDetailViewController: UIViewController {
 
 extension LeagueDetailViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return teamList.count
+        return newsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TeamCell.reuseId, for: indexPath) as! TeamCell
         
-        if let imageURL = URL(string: teamList[indexPath.row].logo){
-            cell.teamImage.loadImageFromURL(imageURL)
-        }
-        cell.teamName.text = teamList[indexPath.row].name
+        cell.teamName.text = newsList[indexPath.row]
         
-        if teamList[indexPath.row].year.isEmpty {
-            cell.teamYear.text = "N/A"
-        }else{
-            cell.teamYear.text = teamList[indexPath.row].year
-        }
         
         return cell
     }

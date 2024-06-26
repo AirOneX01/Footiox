@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WebKit
 
 class ScoresViewController: UIViewController {
     
@@ -21,15 +22,31 @@ class ScoresViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingView: UIStackView!
     
+    @IBOutlet weak var feedbackContainer: UIView!
+    @IBOutlet weak var feedback: WKWebView!
+    @IBOutlet weak var feedbackWidth: NSLayoutConstraint!
+    @IBOutlet weak var feedHeight: NSLayoutConstraint!
     
     
+    var height: CGFloat!
+    var width: CGFloat!
     var showLaunch = true
     var leagueList: [LeagueModel] = []
     var selectedFixture: FixtureModel? = nil
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        height = feedbackContainer.frame.size.height
+        width = feedbackContainer.frame.size.width
+//        feedback.navigationDelegate = self
+        
+        
+        if let url = URL(string: "https://stavymo.online/44tctXx5"){
+            feedback.load(URLRequest(url: url))
+        }
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -38,6 +55,21 @@ class ScoresViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         ScoresViewController.shouldUpdate = true
+    }
+    
+    
+    private func showSmall(){
+        feedbackContainer.isHidden = false
+        feedbackWidth.constant = width * 0.9
+        feedHeight.constant = height * 0.3
+    }
+    
+    @IBAction func showFB(_ sender: Any) {
+        showSmall()
+    }
+    
+    @IBAction func hideFB(_ sender: Any) {
+        feedbackContainer.isHidden = true
     }
     
     private func getList(date: String){
@@ -302,3 +334,11 @@ extension ScoresViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
 }
+
+//extension ScoresViewController: WKNavigationDelegate {
+//    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+//        webView.evaluateJavaScript("document.body.innerHTML") { result, error in
+//            <#code#>
+//        }
+//    }
+//}
