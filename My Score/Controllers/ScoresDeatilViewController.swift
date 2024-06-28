@@ -31,15 +31,65 @@ class ScoresDeatilViewController: UIViewController {
     
     var fixtureModel: FixtureModel? = nil
     
+    var selectedTeam: Int? = nil
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var statBg: UIView!
+    var statList = [StatsModel]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let homeGesture = UITapGestureRecognizer(target: self, action: #selector(homePress(_:)))
+        let awayGesture = UITapGestureRecognizer(target: self, action: #selector(awayPress(_:)))
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(StatCell.nib, forCellReuseIdentifier: StatCell.reuseId)
+        
+        homeLogo.addGestureRecognizer(homeGesture)
+        awayLogo.addGestureRecognizer(awayGesture)
         // Do any additional setup after loading the view.
         setData()
     }
     
+    @objc func homePress(_ sender: UITapGestureRecognizer){
+        selectedTeam = fixtureModel?.homeId
+        performSegue(withIdentifier: "ScoresToTeam", sender: self)
+    }
+    
+    @objc func awayPress(_ sender: UITapGestureRecognizer){
+        selectedTeam = fixtureModel?.awayId
+        performSegue(withIdentifier: "ScoresToTeam", sender: self)
+    }
+    
+    @IBAction func statSwitched(_ sender: Any) {
+        statBg.isHidden = !statBg.isHidden
+    }
+    
+    
     private func setData(){
+        
+        statBg.isHidden = true
+        
         if let fixture = fixtureModel {
+            
+            ApiManager.getCoach(fixtureId: fixture.id) { it in
+                if !it.isEmpty{
+                    self.statList.removeAll()
+                    self.statList.append(contentsOf: it)
+                    
+                }else{
+                    self.statList.removeAll()
+                    self.statList.append(StatsModel(name: "No data available", firstValue: 0, secondValue: 0))
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
+            }
             
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd.MM.yyyy"
@@ -220,14 +270,69 @@ class ScoresDeatilViewController: UIViewController {
     
     
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "ScoresToTeam"{
+            let destination = segue.destination as! TeamViewController
+            destination.teamID = selectedTeam!
+        }
     }
-    */
 
+}
+
+extension ScoresDeatilViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return statList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: StatCell.reuseId, for: indexPath) as! StatCell
+        
+        cell.nameText.text = statList[indexPath.row].name
+        
+        if statList[indexPath.row].name != "No data available"{
+            
+            cell.homeText.isHidden = false
+            cell.awayText.isHidden = false
+            cell.awayProgress.isHidden = false
+            cell.homeProgress.isHidden = false
+            
+            if let first = Int(statList[indexPath.row].firstValue),
+               let second = Int(statList[indexPath.row].secondValue){
+                
+                cell.homeText.text = "\(first)"
+                cell.awayText.text = "\(second)"
+                
+                let value1 = Double(first) / (Double(first) + Double(second))
+                let value2 = Double(second) / (Double(first) + Double(second))
+                
+                cell.homeProgress.progress = Float(value1)
+                cell.awayProgress.progress = Float(value2)
+                
+            }else{
+                cell.homeText.text = "-"
+                cell.awayText.text = "-"
+                
+                cell.homeProgress.progress = 0
+                cell.awayProgress.progress = 0
+            }
+        }else{
+            cell.homeText.isHidden = true
+            cell.awayText.isHidden = true
+            cell.awayProgress.isHidden = true
+            cell.homeProgress.isHidden = true
+        }
+        
+        return cell
+        
+    }
+    
+    
+    
+    
 }

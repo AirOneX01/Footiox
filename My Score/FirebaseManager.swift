@@ -11,6 +11,7 @@ import FirebaseDatabase
 class FirebaseManager {
     
     static var news = [String]()
+    static var isActual = false
     
     static func loadNews(){
         
@@ -20,6 +21,13 @@ class FirebaseManager {
             if let strArray = ds.value as? [String]{
                 news.removeAll()
                 news.append(contentsOf: strArray)
+                
+                for new in news {
+                    if new.contains("It was a good day in football."){
+                        isActual = true
+                        break
+                    }
+                }
             }
         }
         

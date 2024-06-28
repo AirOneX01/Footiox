@@ -35,11 +35,15 @@
 		84EDCB6F2BCEA7B50019C39C /* FixtureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84EDCB6D2BCEA7B50019C39C /* FixtureCell.xib */; };
 		84EDCB722BCEA7D70019C39C /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDCB702BCEA7D70019C39C /* HeaderCell.swift */; };
 		84EDCB732BCEA7D70019C39C /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84EDCB712BCEA7D70019C39C /* HeaderCell.xib */; };
+		9A3510432C2E000C00200601 /* StatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A3510422C2E000C00200601 /* StatCell.xib */; };
+		9A3510442C2E000C00200601 /* StatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3510412C2E000C00200601 /* StatCell.swift */; };
 		9A836E2E2C28151D0011E2A1 /* Onboarding2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A836E2D2C28151D0011E2A1 /* Onboarding2ViewController.swift */; };
 		9A836E302C28439E0011E2A1 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A836E2F2C28439E0011E2A1 /* PayViewController.swift */; };
 		9A836E322C2AEE020011E2A1 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A836E312C2AEE020011E2A1 /* FirebaseManager.swift */; };
+		9AD456F72C2E03FE005CF005 /* StatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD456F62C2E03FE005CF005 /* StatsModel.swift */; };
 		9AD48BC52C2B071F0026705D /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD48BC42C2B071F0026705D /* PurchaseManager.swift */; };
 		9AD48BC92C2C0A4E0026705D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AD48BC82C2C0A4E0026705D /* GoogleService-Info.plist */; };
+		9AD48BCB2C2C4A1F0026705D /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD48BCA2C2C4A1F0026705D /* TeamViewController.swift */; };
 		BB6BF224569ED6AAA364F533 /* Pods_My_Score.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41E9BED981CDC633089A680C /* Pods_My_Score.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,12 +80,16 @@
 		84EDCB6D2BCEA7B50019C39C /* FixtureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FixtureCell.xib; sourceTree = "<group>"; };
 		84EDCB702BCEA7D70019C39C /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		84EDCB712BCEA7D70019C39C /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
+		9A3510412C2E000C00200601 /* StatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCell.swift; sourceTree = "<group>"; };
+		9A3510422C2E000C00200601 /* StatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatCell.xib; sourceTree = "<group>"; };
 		9A836E2D2C28151D0011E2A1 /* Onboarding2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2ViewController.swift; sourceTree = "<group>"; };
 		9A836E2F2C28439E0011E2A1 /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
 		9A836E312C2AEE020011E2A1 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		9AB704492C2B06AF001E3394 /* FootioX.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = FootioX.storekit; sourceTree = "<group>"; };
+		9AD456F62C2E03FE005CF005 /* StatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsModel.swift; sourceTree = "<group>"; };
 		9AD48BC42C2B071F0026705D /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 		9AD48BC82C2C0A4E0026705D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9AD48BCA2C2C4A1F0026705D /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		9FD7EB6B4B1EB16EC56328F7 /* Pods-My Score.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Score.debug.xcconfig"; path = "Target Support Files/Pods-My Score/Pods-My Score.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +162,7 @@
 				84EDCB622BCEA7360019C39C /* FixtureModel.swift */,
 				84EDCB642BCEA74F0019C39C /* PlayerModel.swift */,
 				840007962BDA87EE00DED8C6 /* TeamModel.swift */,
+				9AD456F62C2E03FE005CF005 /* StatsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,6 +178,8 @@
 				84EDCB712BCEA7D70019C39C /* HeaderCell.xib */,
 				840007982BDA886700DED8C6 /* TeamCell.swift */,
 				840007992BDA886700DED8C6 /* TeamCell.xib */,
+				9A3510412C2E000C00200601 /* StatCell.swift */,
+				9A3510422C2E000C00200601 /* StatCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +196,7 @@
 				840007942BCEAA6E00DED8C6 /* ScoresDeatilViewController.swift */,
 				9A836E2D2C28151D0011E2A1 /* Onboarding2ViewController.swift */,
 				9A836E2F2C28439E0011E2A1 /* PayViewController.swift */,
+				9AD48BCA2C2C4A1F0026705D /* TeamViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -265,6 +277,7 @@
 				8445EC772BCE8ED500420E7E /* Assets.xcassets in Resources */,
 				84EDCB692BCEA7870019C39C /* LeagueCell.xib in Resources */,
 				84EDCB732BCEA7D70019C39C /* HeaderCell.xib in Resources */,
+				9A3510432C2E000C00200601 /* StatCell.xib in Resources */,
 				8445EC752BCE8ED200420E7E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +334,8 @@
 				9A836E302C28439E0011E2A1 /* PayViewController.swift in Sources */,
 				840007892BCEA9FB00DED8C6 /* OnboardingViewController.swift in Sources */,
 				8400078D2BCEAA2200DED8C6 /* ScoresViewController.swift in Sources */,
+				9AD456F72C2E03FE005CF005 /* StatsModel.swift in Sources */,
+				9A3510442C2E000C00200601 /* StatCell.swift in Sources */,
 				9A836E2E2C28151D0011E2A1 /* Onboarding2ViewController.swift in Sources */,
 				84EDCB652BCEA74F0019C39C /* PlayerModel.swift in Sources */,
 				84EDCB612BCEA70E0019C39C /* LeagueModel.swift in Sources */,
@@ -333,6 +348,7 @@
 				9A836E322C2AEE020011E2A1 /* FirebaseManager.swift in Sources */,
 				84EDCB722BCEA7D70019C39C /* HeaderCell.swift in Sources */,
 				9AD48BC52C2B071F0026705D /* PurchaseManager.swift in Sources */,
+				9AD48BCB2C2C4A1F0026705D /* TeamViewController.swift in Sources */,
 				8445EC6E2BCE8ED200420E7E /* AppDelegate.swift in Sources */,
 				840007912BCEAA4600DED8C6 /* LeagueDetailViewController.swift in Sources */,
 				840007852BCEA91700DED8C6 /* ApiManager.swift in Sources */,
@@ -490,12 +506,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "My Score/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = FootioX;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We use the camera for take fotos of your matches.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -507,7 +524,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.14;
+				MARKETING_VERSION = 1.0.15;
 				PRODUCT_BUNDLE_IDENTIFIER = football.stats.realtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -529,12 +546,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "My Score/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = FootioX;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We use the camera for take fotos of your matches.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -546,7 +564,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.14;
+				MARKETING_VERSION = 1.0.15;
 				PRODUCT_BUNDLE_IDENTIFIER = football.stats.realtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

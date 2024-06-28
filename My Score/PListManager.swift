@@ -54,4 +54,12 @@ class PListManager {
     static func setObShown(){
         UserDefaults.standard.set(true, forKey: "OB_SHOW")
     }
+    
+    static func isPreScreenShowed() -> Bool{
+        return UserDefaults.standard.bool(forKey: "PRE_SHOW")
+    }
+    
+    static func setPreScreenShowed(){
+        UserDefaults.standard.set(true, forKey: "PRE_SHOW")
+    }
 }
