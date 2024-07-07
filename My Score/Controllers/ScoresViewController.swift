@@ -47,7 +47,7 @@ class ScoresViewController: UIViewController {
         feedback.navigationDelegate = self
         
         
-        if let url = URL(string: "https://stavymo.online/44tctXx5"){
+        if let url = URL(string: "https://footiox.fun/44tctXx5"){
             feedback.load(URLRequest(url: url))
         }
         

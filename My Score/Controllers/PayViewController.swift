@@ -47,12 +47,9 @@ class PayViewController: UIViewController {
             
             self.month = product
             
-            if product == nil {
-                self.product = self.month
-            }
-            
+           
             DispatchQueue.main.async { [self] in
-                monthPrice.text = product.displayPrice
+                yearPrice.text = product.displayPrice
             }
             
         }
@@ -61,8 +58,13 @@ class PayViewController: UIViewController {
             
             self.year = product
             
+            if product == nil {
+                self.product = self.year
+            }
+            
+            
             DispatchQueue.main.async { [self] in
-                yearPrice.text = product.displayPrice
+                monthPrice.text = product.displayPrice
             }
             
         }
@@ -124,12 +126,12 @@ class PayViewController: UIViewController {
     
     @IBAction func yearPressed(_ sender: Any) {
         setYear()
-        product = year
+        product = month
     }
     
     @IBAction func monthPressed(_ sender: Any) {
         setMonth()
-        product = month
+        product = year
     }
     
     @IBAction func weekPressed(_ sender: Any) {
