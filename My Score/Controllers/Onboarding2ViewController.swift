@@ -18,8 +18,8 @@ class Onboarding2ViewController: UIViewController {
     @IBAction func goPressed(_ sender: Any) {
         
         PListManager.setObShown()
-        performSegue(withIdentifier: "ObToPay", sender: self)
-        
+        self.view.window!.rootViewController?.dismiss(animated: true)
+
     }
     
     /*

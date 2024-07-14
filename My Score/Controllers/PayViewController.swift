@@ -140,7 +140,7 @@ class PayViewController: UIViewController {
     }
     
     @IBAction func continuePressed(_ sender: Any) {
-        self.view.window!.rootViewController?.dismiss(animated: true)
+        dismiss(animated: true)
     }
     
     @IBAction func subscribePressed(_ sender: Any) {

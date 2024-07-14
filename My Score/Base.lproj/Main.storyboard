@@ -520,6 +520,14 @@
                                             <constraint firstAttribute="width" constant="36" id="b2S-oA-gM2"/>
                                         </constraints>
                                     </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sparkles" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eyw-OG-fBm">
+                                        <rect key="frame" x="326" y="13.999999999999996" width="36" height="36.666666666666657"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="EUj-3j-COG"/>
+                                            <constraint firstAttribute="width" constant="36" id="qeI-2D-Df9"/>
+                                        </constraints>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3S-Ck-lN0">
                                         <rect key="frame" x="374" y="15" width="36" height="36"/>
                                         <constraints>
@@ -532,16 +540,36 @@
                                             <action selector="callendarPressed:" destination="gPI-YI-ksm" eventType="touchUpInside" id="72E-NW-46F"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lr7-Vb-fn7">
+                                        <rect key="frame" x="326" y="15" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="jW9-KS-8qa"/>
+                                            <constraint firstAttribute="width" constant="36" id="z3e-8P-h1j"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <imageReference key="image" image="sparkles" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <segue destination="Hlj-Zc-DSO" kind="presentation" modalPresentationStyle="fullScreen" id="WwA-Fe-rkL"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="DH1-Q1-8sY" firstAttribute="leading" secondItem="fda-dv-fWz" secondAttribute="leading" constant="20" id="8Yo-AH-Ig4"/>
                                     <constraint firstAttribute="height" constant="66" id="EaR-sp-dgJ"/>
+                                    <constraint firstItem="DNr-bi-gh3" firstAttribute="leading" secondItem="lr7-Vb-fn7" secondAttribute="trailing" constant="12" id="GLa-S5-cQh"/>
                                     <constraint firstItem="DNr-bi-gh3" firstAttribute="centerY" secondItem="fda-dv-fWz" secondAttribute="centerY" id="Ng9-XR-h2r"/>
                                     <constraint firstAttribute="trailing" secondItem="F3S-Ck-lN0" secondAttribute="trailing" constant="20" id="cCu-5v-dpm"/>
                                     <constraint firstAttribute="trailing" secondItem="DNr-bi-gh3" secondAttribute="trailing" constant="20" id="hej-Ae-gAr"/>
+                                    <constraint firstItem="lr7-Vb-fn7" firstAttribute="centerY" secondItem="fda-dv-fWz" secondAttribute="centerY" id="keU-Gx-YRE"/>
                                     <constraint firstItem="DH1-Q1-8sY" firstAttribute="centerY" secondItem="fda-dv-fWz" secondAttribute="centerY" id="ny3-Kz-fdL"/>
                                     <constraint firstItem="F3S-Ck-lN0" firstAttribute="centerY" secondItem="fda-dv-fWz" secondAttribute="centerY" id="qD3-LF-eu5"/>
+                                    <constraint firstItem="eyw-OG-fBm" firstAttribute="centerY" secondItem="fda-dv-fWz" secondAttribute="centerY" id="qe9-DV-f8d"/>
+                                    <constraint firstItem="DNr-bi-gh3" firstAttribute="leading" secondItem="eyw-OG-fBm" secondAttribute="trailing" constant="12" id="tFN-hB-wHW"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0fc-OF-FNl">
@@ -936,7 +964,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Head Coaches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOW-Uz-BfM">
-                                <rect key="frame" x="127.66666666666667" y="377.66666666666669" width="174.66666666666663" height="30"/>
+                                <rect key="frame" x="127.66666666666667" y="377.66666666666669" width="174.66666666666657" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                 <color key="textColor" name="MainText"/>
                                 <nil key="highlightedColor"/>
@@ -1775,7 +1803,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="52 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EM-1N-I7j">
-                                                <rect key="frame" x="0.0" y="24.999999999999986" width="126" height="15.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="24.999999999999989" width="126" height="15.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
                                                 <color key="textColor" name="MainText"/>
                                                 <nil key="highlightedColor"/>
@@ -2050,7 +2078,7 @@
                                     <constraint firstAttribute="height" constant="35" id="9vO-Jj-c7K"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Continue with free plan">
+                                <buttonConfiguration key="configuration" style="plain" title="Close">
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -3124,9 +3152,6 @@ Enhance your football experience with our premium in-depth match analysis. Get d
                             <constraint firstItem="zc0-c8-FzW" firstAttribute="trailing" secondItem="d7s-3X-hbp" secondAttribute="trailing" constant="22" id="x54-2q-ogD"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="Hlj-Zc-DSO" kind="presentation" identifier="ObToPay" modalPresentationStyle="fullScreen" id="akg-Zz-Bq7"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1g-Il-o4W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3160,6 +3185,7 @@ Enhance your football experience with our premium in-depth match analysis. Get d
         <image name="Voting" width="80" height="80"/>
         <image name="VotingSelect" width="80" height="80"/>
         <image name="bell" catalog="system" width="125" height="128"/>
+        <image name="sparkles" catalog="system" width="115" height="128"/>
         <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
         <namedColor name="Background">
             <color red="0.019607843137254902" green="0.17647058823529413" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
