@@ -62,4 +62,22 @@ class PListManager {
     static func setPreScreenShowed(){
         UserDefaults.standard.set(true, forKey: "PRE_SHOW")
     }
+    
+    static func getId() -> String{
+        
+        var id = UserDefaults.standard.string(forKey: "IDENTY")
+        
+        if id == nil {
+            id = UUID().uuidString
+            setId(id: id!)
+        }
+        
+        return id!
+    }
+    
+    static func setId(id: String){
+        UserDefaults.standard.set(id, forKey: "IDENTY")
+    }
+    
+    
 }

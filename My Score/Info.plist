@@ -4,6 +4,8 @@
 <dict>
 	<key>NSCameraUsageDescription</key>
 	<string>We use the camera for take fotos of your matches.</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>We use this data to improve ads experience</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

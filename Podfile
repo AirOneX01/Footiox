@@ -17,6 +17,7 @@ target 'My Score' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'FirebaseAnalytics'
   pod 'FirebaseDatabase'
+  pod 'AppsFlyerFramework'
   # Pods for My Score
 
 end

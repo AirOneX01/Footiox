@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseCore
+import AppsFlyerLib
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,8 +20,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseManager.loadNews()
         PurchaseManager.shared.setUp()
         
+        AppsFlyerLib.shared().isDebug = true
+        
+        AppsFlyerLib.shared().appsFlyerDevKey = "CkkCzCDWSByPyGFtUsU8Fo"
+        AppsFlyerLib.shared().appleAppID = "6499025270"
+        
+        AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 80)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActiveNotification),
+                name: UIApplication.didBecomeActiveNotification,
+                object: nil)
         
         return true
+    }
+    
+    @objc func didBecomeActiveNotification() {
+        
+        AppsFlyerLib.shared().customerUserID = PListManager.getId()
+        AppsFlyerLib.shared().start()
+        
     }
 
     // MARK: UISceneSession Lifecycle
