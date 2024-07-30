@@ -195,33 +195,40 @@ class ScoresDeatilViewController: UIViewController {
     
     private func addNotification(){
         
-        guard let fixture = fixtureModel else { return }
-        
-        guard let seconds = TimeInterval(fixture.date) else { return }
-        
-        let date = Date(timeIntervalSince1970: seconds)
-        
-        let dateComponents: DateComponents
-        if #available(iOS 16, *) {
-            dateComponents = Calendar.current.dateComponents(in: .gmt, from: date)
-        } else {
+        if PurchaseManager.hasPremium() {
             
-            dateComponents = Calendar.current.dateComponents([.minute, .hour, .day, .month, .year], from: date)
-            // Fallback on earlier versions
-        }
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
-        let content = UNMutableNotificationContent()
-        content.title = "Time to play!"
-        content.body = "Game started!"
-        content.sound = UNNotificationSound.default
-        
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        
-        UNUserNotificationCenter.current().add(request) { error in
-            if error == nil {
-                DispatchQueue.main.async {
-                    self.showAlert()
+            guard let fixture = fixtureModel else { return }
+            
+            guard let seconds = TimeInterval(fixture.date) else { return }
+            
+            let date = Date(timeIntervalSince1970: seconds)
+            
+            let dateComponents: DateComponents
+            if #available(iOS 16, *) {
+                dateComponents = Calendar.current.dateComponents(in: .gmt, from: date)
+            } else {
+                
+                dateComponents = Calendar.current.dateComponents([.minute, .hour, .day, .month, .year], from: date)
+            }
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+            let content = UNMutableNotificationContent()
+            content.title = "Time to play!"
+            content.body = "Game started!"
+            content.sound = UNNotificationSound.default
+            
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(request) { error in
+                if error == nil {
+                    DispatchQueue.main.async {
+                        self.showAlert()
+                    }
                 }
+            }
+        }else{
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "DetToPay", sender: self)
+
             }
         }
         

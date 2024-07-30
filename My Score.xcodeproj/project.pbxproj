@@ -10,7 +10,6 @@
 		840007832BCEA8EF00DED8C6 /* PListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840007822BCEA8EF00DED8C6 /* PListManager.swift */; };
 		840007852BCEA91700DED8C6 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840007842BCEA91700DED8C6 /* ApiManager.swift */; };
 		840007872BCEA9B600DED8C6 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840007862BCEA9B600DED8C6 /* Extentions.swift */; };
-		840007892BCEA9FB00DED8C6 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840007882BCEA9FB00DED8C6 /* OnboardingViewController.swift */; };
 		8400078B2BCEAA1000DED8C6 /* LeaguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400078A2BCEAA1000DED8C6 /* LeaguesViewController.swift */; };
 		8400078D2BCEAA2200DED8C6 /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400078C2BCEAA2200DED8C6 /* ScoresViewController.swift */; };
 		8400078F2BCEAA3300DED8C6 /* VotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400078E2BCEAA3300DED8C6 /* VotesViewController.swift */; };
@@ -35,6 +34,7 @@
 		84EDCB6F2BCEA7B50019C39C /* FixtureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84EDCB6D2BCEA7B50019C39C /* FixtureCell.xib */; };
 		84EDCB722BCEA7D70019C39C /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDCB702BCEA7D70019C39C /* HeaderCell.swift */; };
 		84EDCB732BCEA7D70019C39C /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84EDCB712BCEA7D70019C39C /* HeaderCell.xib */; };
+		9A2858972C58DB2C00924055 /* Onboarding3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2858962C58DB2C00924055 /* Onboarding3ViewController.swift */; };
 		9A3510432C2E000C00200601 /* StatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A3510422C2E000C00200601 /* StatCell.xib */; };
 		9A3510442C2E000C00200601 /* StatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3510412C2E000C00200601 /* StatCell.swift */; };
 		9A836E2E2C28151D0011E2A1 /* Onboarding2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A836E2D2C28151D0011E2A1 /* Onboarding2ViewController.swift */; };
@@ -53,7 +53,6 @@
 		840007822BCEA8EF00DED8C6 /* PListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PListManager.swift; sourceTree = "<group>"; };
 		840007842BCEA91700DED8C6 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		840007862BCEA9B600DED8C6 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
-		840007882BCEA9FB00DED8C6 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		8400078A2BCEAA1000DED8C6 /* LeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesViewController.swift; sourceTree = "<group>"; };
 		8400078C2BCEAA2200DED8C6 /* ScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		8400078E2BCEAA3300DED8C6 /* VotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotesViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		84EDCB6D2BCEA7B50019C39C /* FixtureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FixtureCell.xib; sourceTree = "<group>"; };
 		84EDCB702BCEA7D70019C39C /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		84EDCB712BCEA7D70019C39C /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
+		9A2858962C58DB2C00924055 /* Onboarding3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3ViewController.swift; sourceTree = "<group>"; };
 		9A3510412C2E000C00200601 /* StatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCell.swift; sourceTree = "<group>"; };
 		9A3510422C2E000C00200601 /* StatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatCell.xib; sourceTree = "<group>"; };
 		9A836E2D2C28151D0011E2A1 /* Onboarding2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2ViewController.swift; sourceTree = "<group>"; };
@@ -187,7 +187,6 @@
 		84EDCB5F2BCEA6EB0019C39C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				840007882BCEA9FB00DED8C6 /* OnboardingViewController.swift */,
 				8400078A2BCEAA1000DED8C6 /* LeaguesViewController.swift */,
 				8400078C2BCEAA2200DED8C6 /* ScoresViewController.swift */,
 				8400078E2BCEAA3300DED8C6 /* VotesViewController.swift */,
@@ -197,6 +196,7 @@
 				9A836E2D2C28151D0011E2A1 /* Onboarding2ViewController.swift */,
 				9A836E2F2C28439E0011E2A1 /* PayViewController.swift */,
 				9AD48BCA2C2C4A1F0026705D /* TeamViewController.swift */,
+				9A2858962C58DB2C00924055 /* Onboarding3ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -350,7 +350,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A836E302C28439E0011E2A1 /* PayViewController.swift in Sources */,
-				840007892BCEA9FB00DED8C6 /* OnboardingViewController.swift in Sources */,
 				8400078D2BCEAA2200DED8C6 /* ScoresViewController.swift in Sources */,
 				9AD456F72C2E03FE005CF005 /* StatsModel.swift in Sources */,
 				9A3510442C2E000C00200601 /* StatCell.swift in Sources */,
@@ -370,6 +369,7 @@
 				8445EC6E2BCE8ED200420E7E /* AppDelegate.swift in Sources */,
 				840007912BCEAA4600DED8C6 /* LeagueDetailViewController.swift in Sources */,
 				840007852BCEA91700DED8C6 /* ApiManager.swift in Sources */,
+				9A2858972C58DB2C00924055 /* Onboarding3ViewController.swift in Sources */,
 				840007932BCEAA5B00DED8C6 /* VotesDetailsViewController.swift in Sources */,
 				840007832BCEA8EF00DED8C6 /* PListManager.swift in Sources */,
 				840007872BCEA9B600DED8C6 /* Extentions.swift in Sources */,
@@ -524,11 +524,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "My Score/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = FootioX;
+				INFOPLIST_KEY_CFBundleDisplayName = Siasal;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We use the camera for take fotos of your matches.";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "We use this data to improve ads experience";
@@ -543,7 +543,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.20;
+				MARKETING_VERSION = 1.0.21;
 				PRODUCT_BUNDLE_IDENTIFIER = football.stats.realtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -565,11 +565,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "My Score/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = FootioX;
+				INFOPLIST_KEY_CFBundleDisplayName = Siasal;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We use the camera for take fotos of your matches.";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "We use this data to improve ads experience";
@@ -584,7 +584,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.20;
+				MARKETING_VERSION = 1.0.21;
 				PRODUCT_BUNDLE_IDENTIFIER = football.stats.realtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

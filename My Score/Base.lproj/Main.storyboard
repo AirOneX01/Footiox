@@ -11,92 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Onboarding View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="My_Score" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hb3-9a-HTg" userLabel="PurpleView">
-                                <rect key="frame" x="240" y="10" width="190" height="190"/>
-                                <color key="backgroundColor" red="0.84313725490196079" green="0.84705882352941175" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="190" id="AXn-qC-fne"/>
-                                    <constraint firstAttribute="height" constant="190" id="SSN-mz-Iec"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvQ-lZ-eeV">
-                                <rect key="frame" x="0.0" y="105" width="335" height="335"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hD-Lx-OKt">
-                                        <rect key="frame" x="19.999999999999986" y="228.66666666666671" width="226.66666666666663" height="76.333333333333343"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="64"/>
-                                        <color key="textColor" name="Background"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="my" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdm-X7-YCh">
-                                        <rect key="frame" x="20" y="153.66666666666669" width="87" height="75"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="64"/>
-                                        <color key="textColor" name="Background"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.85882352941176465" green="0.99215686274509807" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="PvQ-lZ-eeV" secondAttribute="height" multiplier="1:1" id="9Nz-0A-5hw"/>
-                                    <constraint firstItem="3hD-Lx-OKt" firstAttribute="top" secondItem="cdm-X7-YCh" secondAttribute="bottom" id="G4s-Rt-kX2"/>
-                                    <constraint firstItem="cdm-X7-YCh" firstAttribute="leading" secondItem="PvQ-lZ-eeV" secondAttribute="leading" constant="20" id="TYQ-r5-VoY"/>
-                                    <constraint firstItem="3hD-Lx-OKt" firstAttribute="leading" secondItem="PvQ-lZ-eeV" secondAttribute="leading" constant="20" id="h1M-Zp-yeI"/>
-                                    <constraint firstAttribute="bottom" secondItem="3hD-Lx-OKt" secondAttribute="bottom" constant="30" id="tND-So-cl0"/>
-                                </constraints>
-                            </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OnbordingLogo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vsg-5C-tDQ">
-                                <rect key="frame" x="105" y="0.0" width="325" height="381"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="325" id="J1T-ak-b9A"/>
-                                    <constraint firstAttribute="height" constant="381" id="cyx-Aq-COF"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bH-qZ-PYs">
-                                <rect key="frame" x="20" y="842" width="390" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="amI-MB-Kdw"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Get started"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Get started">
-                                    <backgroundConfiguration key="background" cornerRadius="0.0"/>
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                    <color key="baseForegroundColor" red="0.019607843137254902" green="0.1764705882352941" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="baseBackgroundColor" red="0.85882352941176465" green="0.99215686274509807" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ocz-7l-eGx"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="Background"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4bH-qZ-PYs" secondAttribute="trailing" constant="20" id="4aj-l2-c4t"/>
-                            <constraint firstItem="Hb3-9a-HTg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Bwa-Yc-brm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4bH-qZ-PYs" secondAttribute="bottom" constant="30" id="C7J-Zh-ZTr"/>
-                            <constraint firstAttribute="trailing" secondItem="Vsg-5C-tDQ" secondAttribute="trailing" id="WVY-vD-qgK"/>
-                            <constraint firstItem="Vsg-5C-tDQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YGx-KT-A6C"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hb3-9a-HTg" secondAttribute="trailing" id="Yq2-ll-0y8"/>
-                            <constraint firstItem="4bH-qZ-PYs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZFG-hA-Tkf"/>
-                            <constraint firstItem="PvQ-lZ-eeV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="105" id="bjL-HJ-aFf"/>
-                            <constraint firstItem="PvQ-lZ-eeV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jOP-px-AGc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PvQ-lZ-eeV" secondAttribute="trailing" constant="95" id="t78-J0-q35"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2290" y="-3"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="dSh-D6-ZKt">
             <objects>
@@ -227,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="-1512" y="-3"/>
         </scene>
-        <!--View Controller-->
+        <!--Onboarding3 View Controller-->
         <scene sceneID="KqN-jr-HCO">
             <objects>
-                <viewController id="RZe-OF-b8J" sceneMemberID="viewController">
+                <viewController id="RZe-OF-b8J" customClass="Onboarding3ViewController" customModule="My_Score" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qkm-LI-Flr">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -806,7 +720,6 @@
                         <outlet property="tomorrowView" destination="dtL-Rt-qta" id="bht-Ip-jrL"/>
                         <outlet property="yesterdayText" destination="K8V-VB-Bc1" id="Kev-Yu-qs0"/>
                         <outlet property="yesterdayView" destination="Zpi-QG-btr" id="MVq-YF-pg3"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="MainToOnb" modalPresentationStyle="fullScreen" id="0St-V3-e93"/>
                         <segue destination="l74-cU-xu3" kind="presentation" identifier="ScoreToDetail" modalPresentationStyle="fullScreen" id="J1U-mS-o6t"/>
                         <segue destination="UoU-i3-4Oa" kind="presentation" identifier="MainToOnb2" modalPresentationStyle="fullScreen" id="ynw-vj-wGE"/>
                     </connections>
@@ -1147,6 +1060,7 @@
                         <outlet property="statBg" destination="ghC-DD-gqv" id="glx-X0-gAF"/>
                         <outlet property="tableView" destination="tLV-td-5Cg" id="n9y-Rs-ZJf"/>
                         <segue destination="8f3-f7-awj" kind="presentation" identifier="ScoresToTeam" modalPresentationStyle="fullScreen" id="RGc-4b-bBn"/>
+                        <segue destination="Hlj-Zc-DSO" kind="presentation" identifier="DetToPay" modalPresentationStyle="fullScreen" id="S2f-8v-wqb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCa-e7-B6f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2100,7 +2014,6 @@
                                     <color key="baseBackgroundColor" red="0.85882352939999995" green="0.99215686270000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XfO-Oh-Irb"/>
                                     <action selector="subscribePressed:" destination="Hlj-Zc-DSO" eventType="touchUpInside" id="UnR-XL-J4g"/>
                                 </connections>
                             </button>
@@ -2332,7 +2245,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="535"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ab1-sx-hda">
-                                        <rect key="frame" x="0.0" y="0.0" width="430" height="449"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="456.66666666666669"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="oAv-IL-9uU">
                                                 <rect key="frame" x="22" y="12" width="386" height="53"/>
@@ -2344,7 +2257,7 @@
                                                             <constraint firstAttribute="height" constant="53" id="XTo-gD-Jz7"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premium Features: Unlock Football Predictions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hig-Nt-6sp">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premium Features: Unlock Match Start Notifications" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hig-Nt-6sp">
                                                         <rect key="frame" x="70" y="0.33333333333333215" width="316" height="52.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2353,21 +2266,21 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gs-I9-D0t">
-                                                <rect key="frame" x="22" y="81" width="386" height="147"/>
-                                                <string key="text">Premium Features: In-Depth Match Analysis
-Enhance your football experience with our premium in-depth match analysis. Get detailed breakdowns of every game, including player performance, tactical insights, and key moments, all delivered in an easy-to-understand format.</string>
+                                                <rect key="frame" x="22" y="81" width="386" height="105"/>
+                                                <string key="text">Premium Features: Match Start Notifications
+Never miss the kickoff with our premium match start notifications. Receive instant alerts when your favorite team's match is about to begin, ensuring you're always ready for the action.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premium Benefits:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsb-Kv-hxh">
-                                                <rect key="frame" x="22" y="244" width="175.66666666666666" height="24"/>
+                                                <rect key="frame" x="22" y="202" width="175.66666666666666" height="24"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <color key="textColor" name="MainText"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCB-pn-u1k">
-                                                <rect key="frame" x="22" y="268" width="175.66666666666666" height="4"/>
+                                                <rect key="frame" x="22" y="226" width="175.66666666666666" height="4"/>
                                                 <color key="backgroundColor" name="TopSelect"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="sJZ-0j-yXw"/>
@@ -2377,7 +2290,7 @@ Enhance your football experience with our premium in-depth match analysis. Get d
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iSD-gD-bDB">
-                                                <rect key="frame" x="22" y="288" width="386" height="139"/>
+                                                <rect key="frame" x="22" y="246" width="386" height="188.66666666666663"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="XBL-XF-4XH">
                                                         <rect key="frame" x="0.0" y="0.0" width="386" height="39.666666666666664"/>
@@ -2389,7 +2302,7 @@ Enhance your football experience with our premium in-depth match analysis. Get d
                                                                     <constraint firstAttribute="height" constant="24" id="vUV-2h-Pwj"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detailed Insights: Comprehensive analysis of matches, players, and strategies." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2E-ZL-UTh">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instant Alerts: Get notified the moment a match starts." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2E-ZL-UTh">
                                                                 <rect key="frame" x="36" y="0.0" width="350" height="39.666666666666664"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2407,7 +2320,7 @@ Enhance your football experience with our premium in-depth match analysis. Get d
                                                                     <constraint firstAttribute="width" constant="24" id="h6t-ZR-Xqc"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enhanced Visuals: Access to exclusive charts, heat maps, and video highlights." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zY-jQ-PAc">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customizable Notifications: Choose which teams and competitions to receive alerts for." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zY-jQ-PAc">
                                                                 <rect key="frame" x="36" y="0.0" width="350" height="39.666666666666664"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2425,7 +2338,25 @@ Enhance your football experience with our premium in-depth match analysis. Get d
                                                                     <constraint firstAttribute="height" constant="24" id="zAY-id-stK"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expert Commentary: Insights and commentary from football experts." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMY-G5-o2A">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exclusive Updates: Stay informed with premium match-related updates and news." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMY-G5-o2A">
+                                                                <rect key="frame" x="36" y="0.0" width="350" height="39.666666666666664"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Z5n-QW-4nX">
+                                                        <rect key="frame" x="0.0" y="149" width="386" height="39.666666666666657"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PayListImage" translatesAutoresizingMaskIntoConstraints="NO" id="vyO-Pa-XXU">
+                                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="24" id="Jqc-rR-0MY"/>
+                                                                    <constraint firstAttribute="width" constant="24" id="sCc-vw-EzK"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscribe now and stay ahead with real-time match start notifications." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LrQ-LM-lnl">
                                                                 <rect key="frame" x="36" y="0.0" width="350" height="39.666666666666664"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3161,7 +3092,8 @@ Enhance your football experience with our premium in-depth match analysis. Get d
     <inferredMetricsTieBreakers>
         <segue reference="rZd-gu-74N"/>
         <segue reference="CU4-9q-6Kf"/>
-        <segue reference="nVP-GA-gjm"/>
+        <segue reference="S2f-8v-wqb"/>
+        <segue reference="Ipw-xz-c22"/>
         <segue reference="WTr-MB-pHB"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -3175,7 +3107,6 @@ Enhance your football experience with our premium in-depth match analysis. Get d
         <image name="ObIMG1" width="1016" height="858"/>
         <image name="ObIMG2" width="951" height="937"/>
         <image name="ObIMG3" width="989" height="964"/>
-        <image name="OnbordingLogo" width="947" height="1096"/>
         <image name="PayListImage" width="50" height="50"/>
         <image name="PayTitleImage" width="103" height="135"/>
         <image name="Scores" width="80" height="80"/>

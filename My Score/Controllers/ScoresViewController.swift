@@ -112,9 +112,7 @@ class ScoresViewController: UIViewController {
             if !PListManager.isObShowed(){
                 performSegue(withIdentifier: "MainToOnb2", sender: self)
             }else{
-                if !PListManager.isPreScreenShowed(){
-                    performSegue(withIdentifier: "MainToOnb", sender: self)
-                }else{
+                if PListManager.isPreScreenShowed(){
                     showShowBigFeedback()
                 }
             }
